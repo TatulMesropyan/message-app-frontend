@@ -1,19 +1,25 @@
-import {useState} from 'react';
-import {Button} from "@mui/material";
-import React, { ChangeEvent } from 'react';
+import React, { useState,ChangeEvent, MouseEvent } from 'react';
+import {Button, TextField} from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import './App.css';
 
 const SendMessage = ():JSX.Element => {
     const [text, setText] = useState('');
 
-    const inputHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleTextChange = (event: ChangeEvent<HTMLInputElement>) => {
         // @ts-ignore
         setText(event.target.value)
     };
+
+    const handleButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        setText('')
+        // Should be post logic
+    }
     return (
-        <div>
-            <input onChange={inputHandler} value={text}/>
-            <Button>
+        <div className='messageSection'>
+            <TextField onChange={handleTextChange} value={text} fullWidth/>
+            <Button onClick={handleButtonClick}>
                 <SendIcon/>
             </Button>
         </div>

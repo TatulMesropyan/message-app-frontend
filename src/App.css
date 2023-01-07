@@ -1,0 +1,8 @@
+.mainWrapper{
+    height: 100%;
+}
+.messageSection{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
