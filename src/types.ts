@@ -23,6 +23,14 @@ export interface SendMessageProps {
     socket:any,
     username:string|null,
     room:number|null
+    messageList: Array<messageDataTypes>
+}
+
+export interface messageDataTypes {
+    room: string,
+    author: string,
+    message: string,
+    time: Date,
 }
 
 export interface JoinChatProps {
@@ -31,4 +39,9 @@ export interface JoinChatProps {
     username: string|null,
     roomID: number|null,
     setRoomID: React.Dispatch<SetStateAction<number|null>>
+}
+
+export interface MessageFormProps {
+    messageList:any,
+    username:string | null,
 }

@@ -17,3 +17,9 @@
     width: 500px;
     align-items: center;
 }
+.guestMessage{
+    background-color: aqua;
+}
+.myMessages{
+    background-color: red;
+}

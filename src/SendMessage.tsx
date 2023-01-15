@@ -6,7 +6,7 @@ import MessageForm from "./MessagesForm";
 import {SendMessageProps} from "./types";
 
 const SendMessage = (props: SendMessageProps):JSX.Element => {
-    const {socket, username, room} = props;
+    const {socket, username, room,messageList} = props;
     const [text, setText] = useState<string|null>('');
 
     const handleTextChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +17,7 @@ const SendMessage = (props: SendMessageProps):JSX.Element => {
         event.preventDefault();
         if(text){
             const messageData = {
-                room: room,
+                roomID: room,
                 author: username,
                 message: text,
                 time: `${new Date(Date.now()).getHours()}:${new Date(Date.now()).getMinutes()}`
@@ -27,7 +27,7 @@ const SendMessage = (props: SendMessageProps):JSX.Element => {
     }
     return (
         <>
-            <MessageForm username={username}/>
+            <MessageForm messageList={messageList} username={username}/>
         <div className='messageSection'>
             <TextField onChange={handleTextChange} value={text} fullWidth/>
             <Button onClick={handleButtonClick}>
