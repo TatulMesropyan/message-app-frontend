@@ -8,16 +8,10 @@ const MessageForm = (props : MessageFormProps):JSX.Element => {
     return (
         <Paper >
             {messageList?.map((item:any,index:number) => (
-                item.author === username ?(
-                <div className="myMessages">
-                    <div key={index}>{item.message}</div>
-                    <div>{item.author} {item.date}</div>
+                <div key={index} className={item.author === username ? "myMessages" : "guestMessage"}>
+                    <h3>{item.message}</h3>
+                    <p>{item.author} {item.date}</p>
                 </div>
-                ) :
-                ( <div className="guestMessage">
-                    <div key={index}>{item.message}</div>
-                    <div>{item.author} {item.date}</div>
-                    </div>)
             ))}
         </Paper>
     );

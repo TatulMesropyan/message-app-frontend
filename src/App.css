@@ -1,6 +1,8 @@
 .mainWrapper{
     height: 100%;
     align-content: center;
+    margin: 10rem;
+
 }
 .messageSection{
     display: flex;
@@ -18,8 +20,14 @@
     align-items: center;
 }
 .guestMessage{
+    padding: 10px;
     background-color: aqua;
+    border: black 1px solid;
+    text-align: left;
 }
 .myMessages{
+    padding: 10px;
     background-color: red;
+    border: black 1px solid;
+    text-align: right;
 }

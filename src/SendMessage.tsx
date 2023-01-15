@@ -22,6 +22,7 @@ const SendMessage = (props: SendMessageProps):JSX.Element => {
                 message: text,
                 time: `${new Date(Date.now()).getHours()}:${new Date(Date.now()).getMinutes()}`
                 };
+            setText('');
             await socket.emit('send_message',messageData);
         }
     }

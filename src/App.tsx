@@ -19,12 +19,13 @@ function App() {
             setMessageList((list) => [...list,data])
         })
     },[socket]);
+
     return (
   <div className='mainWrapper'>
       <Routes>
       <Route
-            path={'/'}
-             element={
+              path={'/'}
+              element={
           <JoinChat
               socket={socket}
               setUsername={setUsername}

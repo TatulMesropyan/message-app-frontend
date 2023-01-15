@@ -20,28 +20,28 @@ export interface SocketData {
 }
 
 export interface SendMessageProps {
-    socket:any,
-    username:string|null,
-    room:number|null
+    socket: any;
+    username: string|null;
+    room: number|null;
     messageList: Array<messageDataTypes>
 }
 
 export interface messageDataTypes {
-    room: string,
-    author: string,
-    message: string,
-    time: Date,
+    room: string;
+    author: string;
+    message: string;
+    time: Date;
 }
 
 export interface JoinChatProps {
-    socket: any,
-    setUsername: React.Dispatch<SetStateAction<string|null>>
-    username: string|null,
-    roomID: number|null,
-    setRoomID: React.Dispatch<SetStateAction<number|null>>
+    socket: any;
+    setUsername: React.Dispatch<SetStateAction<string|null>>;
+    username: string|null;
+    roomID: number|null;
+    setRoomID: React.Dispatch<SetStateAction<number|null>>;
 }
 
 export interface MessageFormProps {
-    messageList:any,
-    username:string | null,
+    messageList: any;
+    username: string | null;
 }
