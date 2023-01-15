@@ -1,8 +1,19 @@
 .mainWrapper{
     height: 100%;
+    align-content: center;
 }
 .messageSection{
     display: flex;
     flex-direction: row;
     gap:10px;
+}
+.joinChat{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+}
+.joinChatWindow{
+    width: 500px;
+    align-items: center;
 }

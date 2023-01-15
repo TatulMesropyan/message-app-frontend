@@ -2,9 +2,9 @@ import React from 'react';
 import { Paper } from "@mui/material";
 import './App.css';
 
-const MessageForm = ():JSX.Element => {
+const MessageForm = ({socket}:any):JSX.Element => {
     return (
-        <Paper></Paper>
+        <Paper ></Paper>
     );
 }
 
